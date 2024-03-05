@@ -3,7 +3,7 @@ const {Router} = require('express')
 const router = Router()
 
 const {getAll, getOne, create,login} = require('../controllers/user') 
-const Auth= require("../midlewares");
+const Auth= require("../middlewares");
 
 //obtener usuarios
 router.get('/',Auth, getAll)

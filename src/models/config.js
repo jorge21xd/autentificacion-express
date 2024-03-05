@@ -1,5 +1,6 @@
-const { Sequelize } = require('sequelize')
+require('dontenv').config()
+const {Sequelize} = require('sequelize')
 
-const sequelize = new Sequelize('postgresql://postgres:B4A5GfBCDFF2e11deC56eb*fED32bgcE@roundhouse.proxy.rlwy.net:51114/railway')
-
-module.exports = sequelize
+module.exports = new Sequelize('sqlite:./database.sqlite',{
+    logging:false
+})
